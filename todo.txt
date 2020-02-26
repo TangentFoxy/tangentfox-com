@@ -1,0 +1,14 @@
+  models/Submissions: complete list of constraints
+  account creation/login/logout needed
+  submissions_index view: has access to variables @page, @tag, @last_page, @submissions, @game (note: some may be optional)
+  applications/submissions: need to verify what will happen when returning a 404 page (there are multiple places where this may occur)
+  create models/Tags
+  create models/SubmissionTags (may not be necessary)
+x create migration for tags: id, name
+x create migration for submission_tags: id, tag_id, submission_id
+  submissions_tags view: has access to variables @page, @last_page, @tags, @game (note: some may be optional)
+  submissions_view view: has access to variables @submission, @creator, @game (note: some may be optional)
+  create @session.message system
+  report bug / create pull: lapis docs utils/whatever "respond_to" doesn't link to Handling HTTP Verbs correctly
+  finish submissions_view: POST for updating
+  applications/submissions: submit, search, submission-stats, my-submissions, random submission
