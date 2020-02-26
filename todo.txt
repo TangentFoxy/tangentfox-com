@@ -9,6 +9,6 @@ x create migration for submission_tags: id, tag_id, submission_id
   submissions_tags view: has access to variables @page, @last_page, @tags, @game (note: some may be optional)
   submissions_view view: has access to variables @submission, @creator, @game (note: some may be optional)
   create @session.message system
-  report bug / create pull: lapis docs utils/whatever "respond_to" doesn't link to Handling HTTP Verbs correctly
+x report bug / create pull: lapis docs utils/whatever "respond_to" doesn't link to Handling HTTP Verbs correctly
   finish submissions_view: POST for updating
   applications/submissions: submit, search, submission-stats, my-submissions, random submission
