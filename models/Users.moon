@@ -22,6 +22,9 @@ class Users extends Model
 
     email: (value) =>
       if value
+        if value\len! > 255
+          return "Email addresses must be 255 or fewer characters in length."
+
         if value\find "%s"
           return "Email addresses cannot contain spaces."
 
