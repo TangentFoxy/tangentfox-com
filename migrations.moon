@@ -15,9 +15,11 @@ import create_table, types, add_column from require "lapis.db.schema"
       { "version", types.varchar null: true }
       { "name", types.varchar }
       { "link", types.text }
+      { "creator", types.varchar null: true }
       { "description", types.text null: true }
       { "status", types.integer default: 0 }
       { "video_id", types.varchar null: true }
+      { "notes", types.text null: true }
 
       {"created_at", types.time}
       {"updated_at", types.time}

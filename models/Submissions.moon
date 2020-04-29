@@ -5,9 +5,9 @@ class Submissions extends Model
 
   @games: enum {
     undefined: 0
-    ksp: 1
-    starmade: 2
-    "space-engineers": 3
+    "Kerbal Space Program": 1
+    StarMade: 2
+    "Space Engineers": 3
   }
 
   @statuses: enum {
@@ -27,7 +27,7 @@ class Submissions extends Model
         return "Submissions must have a name."
 
       if value\len! > 255
-        return "Submission names must be 255 or fewer characters in length."
+        return "Submission names must be 255 or fewer bytes in length."
 
     link: (value) =>
       if not value or value\len! < 1
