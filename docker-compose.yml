@@ -1,0 +1,24 @@
+# this configuration is intended for local building & testing
+version: '3.5'
+volumes:
+  db: {}
+
+services:
+  tangentfox-com:
+    build: "."
+    image: guard13007/tangentfox-com:testing
+    env_file:
+      - secret.env
+    depends_on:
+      - postgres
+    ports:
+      - "8000:80"
+    restart: unless-stopped
+
+  postgres:
+    image: postgres-12.1-alpine
+    volumes:
+      - db:/var/lib/postgres/data
+    env_file:
+      - secret.env
+    restart: unless-stopped
